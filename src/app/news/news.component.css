@@ -1,0 +1,12 @@
+.news {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+
+}
+
+#text {
+  margin-top: 50px; /* Adjust this value based on your desired spacing */
+  color: whitesmoke;
+}
