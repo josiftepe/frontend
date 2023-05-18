@@ -154,26 +154,42 @@
 }
 #quantityText {
   position: absolute;
-  top: 340px;
-  left: 35px;
+  top: 410px;
+  left: 20px;
 }
 .quantityTextBox {
   position: absolute;
-  top: 360px;
-  width: 300px;
+  top: 410px;
+  width: 350px;
   height: 50px;
   font-size: 25px;
-  left: 35px
+  left: 20px
 }
+.quantity2TextBox {
+  position: absolute;
+  top: 470px;
+  left: 20px;
+  width: 330px;
+  height: 50px;
+  border-radius: 30px;
+  font-size: 25px;
 
+}
 #usd {
   position: absolute;
-  top: 380px;
-  left: 280px;
+  top: 480px;
+  left: 300px;
+}
+#crypto {
+
+  position: absolute;
+  top: 480px;
+  left: 300px;
+
 }
 .usdButton15 {
   position: absolute;
-  top: 450px;
+  top: 550px;
   background: black;
   color: white;
   border-radius: 30px;
@@ -183,7 +199,7 @@
 }
 .usdButton150 {
   position: absolute;
-  top: 450px;
+  top: 550px;
   background: black;
   color: white;
   border-radius: 30px;
@@ -193,7 +209,7 @@
 }
 .usdButton1500 {
   position: absolute;
-  top: 450px;
+  top: 550px;
   background: black;
   color: white;
   border-radius: 30px;
@@ -203,7 +219,7 @@
 }
 .usdButton15C {
   position: absolute;
-  top: 450px;
+  top: 550px;
   background: black;
   color: white;
   border-radius: 30px;
@@ -213,7 +229,7 @@
 }
 .usdButton150C {
   position: absolute;
-  top: 450px;
+  top: 550px;
   background: black;
   color: white;
   border-radius: 30px;
@@ -222,7 +238,7 @@
   left: 145px}
 .usdButton1500C {
   position: absolute;
-  top: 450px;
+  top: 550px;
   background: black;
   color: white;
   border-radius: 30px;
@@ -239,8 +255,8 @@
 }
 #quan {
   position: absolute;
-  top: 420px;
-  left: 28px;
+  top: 410px;
+  left: 20px;
 }
 .confirm {
   position: absolute;
@@ -260,10 +276,36 @@
   background-color: aqua;
 }
 .market-buy {
-  background-color: aqua;
+  position: absolute;
+  left: 50px;
+  top: 260px;
+  height: 40px;
+  background-color: #d8560b;
+  border-radius: 30px;
+  width: 100px;
+  font-size: 20px;
 }
 .limit-buy {
-  background-color: #007bff;
+  position: absolute;
+  left: 180px;
+  font-size: 20px;
+
+  height: 40px;
+  top: 260px;
+
+  background-color: #6bbb20;
+  border-radius: 30px;
+  width: 100px;
+}
+.priceBox {
+  position: absolute;
+  width: 330px;
+  height: 50px;
+  border-radius: 30px;
+  top: 330px;
+  color:black;
+  font-size: 25px;
+  left: 20px;
 }
 * {
 

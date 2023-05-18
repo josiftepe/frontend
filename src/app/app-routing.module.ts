@@ -7,6 +7,7 @@ import {RegisterComponent} from "./register/register.component";
 import {TradingDashboardComponent} from "./trading-dashboard/trading-dashboard.component";
 import {MarketComponent} from "./market/market.component";
 import {PortofolioComponent} from "./portofolio/portofolio.component";
+import { NavbarloggedinComponent } from './navbarloggedin/navbarloggedin.component';
 
 const routes: Routes = [
   {path: "login", component:SigninComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'trade', component : TradingDashboardComponent},
   {path : 'market', component:MarketComponent},
   {path : 'portofolio', component:PortofolioComponent},
+  {path : 'loggedin', component:NavbarloggedinComponent},
 
 
 

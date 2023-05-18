@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { map } from "rxjs/operators";
+import { CookieService } from "./cookie.service";
 
 @Injectable({
   providedIn: "root"
@@ -36,10 +37,22 @@ export class AuthenticationService {
   }
 
   logOut() {
+    // this.httpClient.post("http://localhost:8080/api/authentication/logout", {}).subscribe(x => {
+    //   console.log("fine")
+    // }, (error => {
+    //   console.log(error)
+    // }));
+    sessionStorage.clear();
     sessionStorage.removeItem("email");
     sessionStorage.removeItem("token");
 
     // Clear the JSESSIONID cookie
     document.cookie = "JSESSIONID=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+  }
+  getUserInfo() {
+    if(this.isUserLoggedIn()) {
+      return this.httpClient.get('http://localhost:8080/api/authentication/user')
+    }
+    return null
   }
 }

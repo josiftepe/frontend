@@ -11,6 +11,7 @@ export class UserService {
   constructor(private httpClient: HttpClient) {}
 
   getUserInfo() {
-    return this.httpClient.get<User>(`${this.apiUrl}/user`);
+    const url = this.apiUrl + '/user'
+    return this.httpClient.get<User>(url);
   }
 }

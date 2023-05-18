@@ -49,7 +49,6 @@ export class RegisterComponent implements OnInit{
 
     this.registrationService.register(user).subscribe(
       (response: RegisterResponse) => {
-        // Handle the response, such as displaying a success message
       this.successMessage = "Succesfully registered!";
         console.log("Succesfully registered!");
         setTimeout(() => {
@@ -66,7 +65,6 @@ export class RegisterComponent implements OnInit{
   }
 
   validateInput(): boolean {
-    // Add validation logic here
     return true;
   }
 }

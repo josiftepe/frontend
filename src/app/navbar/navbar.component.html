@@ -5,20 +5,28 @@
   <div class="spacer">
     <button mat-flat-button color="blue" class="btn1" routerLink="/dashboard">Dashboard</button>
     <button mat-flat-button color="blue" routerLink="/trade">Trading</button>
-    <button mat-flat-button color="blue">Market</button>
+    <button mat-flat-button color="blue" routerLink="/market">Market</button>
     <button mat-flat-button color="blue" routerLink="/portofolio">Portofolio </button>
 
   </div>
   <div class="login" >
-    <button mat-button class="primary" disabled="true" class="timeBtn">{{ dateTime | date: 'mediumDate' }}</button>
 
+    <div *ngIf="loggedIn">
+    <button  id="userBtn" disabled="true">{{ user!!.email }}</button>
+  </div>
     <div *ngIf="!loggedIn">
     <button mat-flat-button color="blue" class="loginBtn" routerLink="/login">Sign in</button>
+    </div>
+    <div *ngIf="loggedIn">
+      <button mat-button class="primary" disabled="true" class="timeBtn">{{ dateTime | date: 'mediumDate' }}</button>
+
     </div>
     <div *ngIf="loggedIn">
       <button mat-flat-button color="blue" class="loginBtn" (click)="logOut()">Sign out</button>
 
     </div>
-    <mat-icon id="icon">account_circle</mat-icon>
+    <div *ngIf="!loggedIn">
+      <button mat-flat-button color="blue" class="registerBtn" routerLink="/register">Register</button>
+     </div>
   </div>
 </mat-toolbar>

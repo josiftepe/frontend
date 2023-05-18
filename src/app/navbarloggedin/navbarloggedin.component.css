@@ -136,6 +136,7 @@
 }
 
 /* Large screens */
+@media screen and (min-width: 768px) {
   .toolbar {
     height: 70px;
     flex-wrap: nowrap;
@@ -170,16 +171,4 @@
   .timeBtn {
     right: 30px;
   }
-  #userBtn {
-    position: absolute;
-    left: 900px;
-    top: 15px;
-    background-color: #F94C66;
-    color: white;
-    border-radius: 30px;
-    border: solid;
-    outline: none;
-    border-color: #F94C66;
-    width: 200px;
-  }
-
+}

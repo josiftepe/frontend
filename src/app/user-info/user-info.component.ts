@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from '../authentication.service';
 import {User} from "../User";
 import {UserService} from "../user.service";
 
@@ -12,8 +13,8 @@ export class UserInfoComponent implements OnInit {
 
   user: User | undefined;
   errorMessage: string | undefined;
-
-  constructor(private userService: UserService) { }
+  loggedin : boolean = false
+  constructor(private userService: UserService, private authService : AuthenticationService) { }
 
   ngOnInit(): void {
     this.userService.getUserInfo()
@@ -26,10 +27,15 @@ export class UserInfoComponent implements OnInit {
           this.errorMessage = error.message;
         }
       );
+      if(this.authService.isUserLoggedIn()) {
+        this.loggedin = true;
+      }
+      else {
+        this.loggedin = false;
+      }
 
   }
   getInfo() {
-    console.log("baki")
     this.userService.getUserInfo()
       .subscribe(
         user => {

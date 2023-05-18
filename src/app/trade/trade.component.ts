@@ -5,6 +5,7 @@ import {OrderType} from "../OrderType";
 import {OrderDirection} from "../OrderDirection";
 import {PriceService} from "../price.service";
 import {AuthenticationService} from "../authentication.service";
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-trade',
@@ -92,7 +93,7 @@ export class TradeComponent {
     if(type == "market") {
       this.selectedOrder = 'market'
       this.orderType = OrderType.MARKET
-
+      this.priceOfOrder = "MARKET PRICE"
 
 
     }
@@ -111,7 +112,6 @@ export class TradeComponent {
         console.log(x);
       } catch (error) {
         console.error(error);
-        // Handle error if necessary
       }
     } else {
       this.realPrice = Number(this.priceOfOrder.toString());
@@ -123,7 +123,6 @@ let quan = 0
     else {
       quan = Number(this.quantityTextBox.toString())
     }
-    console.log(this.realPrice + " " +  quan);
 
     let order: Order = {
       poolID: this.poolId,
@@ -136,15 +135,16 @@ let quan = 0
     this.orderService.createOrder(order).subscribe(
       (success) => {
         console.log("order successfully sent");
+        this.toastr.success("Order successfull!")
       },
       (error) => {
         console.error(error);
-        // Handle error if necessary
+        this.toastr.error("Order not successfull!")
       }
     );
   }
 
-  constructor(private orderService : OrderService, private priceService : PriceService, private authenticationService : AuthenticationService) {
+  constructor(private orderService : OrderService, private priceService : PriceService, private authenticationService : AuthenticationService, private toastr : ToastrService) {
   }
 }
 

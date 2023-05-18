@@ -1,18 +1,28 @@
-* {
-  position: absolute;
-  top: 2px;
-}
+
 
 #text {
   position: absolute;
-  top: 300px;
+  top: 100px;
+  left: 300px;
+  color: white;
+}
+#text2 {
+  position: absolute;
+  top: 130px;
   left: 300px;
   color: white;
 }
 
-@media (max-width: 768px) {
-  #text {
-    top: 150px;
-    left: 150px;
-  }
+#orders {
+  position: absolute;
+  top: 200px;
+  left: 300px;
+  color: #F94C66;
+}
+.table{
+  color: white;
+  width: 300px;
+  position: absolute;
+  top: 240px;
+  left: 299px;
 }

@@ -20,7 +20,7 @@ export class SigninComponent {
       .subscribe(
         data => {
           localStorage.setItem('token', data.token);
-          this.router.navigate(['/dashboard']);
+          window.location.href = '/dashboard'
         },
         error => {
           console.log(error);

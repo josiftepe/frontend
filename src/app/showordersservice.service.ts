@@ -10,7 +10,7 @@ export class ShowordersserviceService {
 
   getAllOrders() {
       const path = this.url + '/orders'
-    return this.http.get(path)
+    return this.http.get<any>(path)
   }
   getTotalBalance() {
       const path = this.url + '/total'
@@ -19,5 +19,9 @@ export class ShowordersserviceService {
   getUSDBalance() {
       const path = this.url + '/balance'
     return this.http.get(path)
+  }
+  getAllAsets() {
+      const path = this.url + '/assets'
+    return this.http.get<any>(path)
   }
 }

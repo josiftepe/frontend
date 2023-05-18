@@ -25,11 +25,12 @@
     <button class="limit-buy" (click)="setOrderType('limit')">Limit</button>
 
   <div *ngIf="selectedOrder == 'limit'">
-<input class="priceBox" [(ngModel)]="priceOfOrder">
+<input class="priceBox" [(ngModel)]="priceOfOrder" placeholder="Enter price...">
   </div>
     <div *ngIf="selectedOrder == 'market'">
       <input class="priceBox" [(ngModel)]="priceOfOrder" placeholder="Market price">
     </div>
+  </div>
   <div *ngIf="btnGreen">
     <h2 id="quantityText">How much? </h2>
     <div class="quantity">
@@ -50,7 +51,7 @@
     <button class="usdButton15C" (click)="changeQuantityBox('100')">10 {{cryptoTextBox}}</button>
     <button class="usdButton150C" (click)="changeQuantityBox('1000')">100 {{cryptoTextBox}}</button>
     <button class="usdButton1500C" (click)="changeQuantityBox('10000')">1000 {{cryptoTextBox}}</button>
-
+  <h2 id="crypto">{{cryptoTextBox}}</h2>
   </div>
   <div class="buttonConfirm">
     <button class="confirm" (click)="getPrice()">  Confirm <i class="fa-regular fa-circle-check"></i> </button>

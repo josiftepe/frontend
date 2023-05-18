@@ -29,8 +29,12 @@ import {NgChartsModule} from 'ng2-charts';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {BasicAuthHtppInterceptorService} from "./BasicAuthHtppInterceptorService";
 import { UserInfoComponent } from './user-info/user-info.component';
-import {NgOptimizedImage} from "@angular/common";
+import {CommonModule, NgOptimizedImage} from "@angular/common";
 import { ShowOrdersComponent } from './show-orders/show-orders.component';
+import { PiechartComponent } from './piechart/piechart.component';
+import {Chart, ChartOptions, ChartDataset} from 'chart.js';
+import { NavbarloggedinComponent } from './navbarloggedin/navbarloggedin.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -48,10 +52,14 @@ import { ShowOrdersComponent } from './show-orders/show-orders.component';
     MarketComponent,
     PortofolioComponent,
     UserInfoComponent,
-    ShowOrdersComponent
+    ShowOrdersComponent,
+    PiechartComponent,
+    NavbarloggedinComponent
+
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
@@ -65,6 +73,11 @@ import { ShowOrdersComponent } from './show-orders/show-orders.component';
     NgChartsModule,
     HttpClientModule,
     NgOptimizedImage,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule,
+
+
+
 
 
   ],

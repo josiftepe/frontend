@@ -1,6 +1,31 @@
-<app-user-info></app-user-info>
-<h1>Your total balance: </h1>
-<button (click)="showTotal()">Total balance</button>
-<button (click)="showUSD()">Your balance</button>
-<input type="text" [(ngModel)]="usdBalance">
-<input type="tel" [(ngModel)]="totalBalance">
+<div class="all">
+<h1 id="balance">Your total balance to spend: {{usdBalance}}$</h1>
+<h1 id="totalBal">Your portofolio value: {{totalBalance}} $</h1>
+<h1 id="quan">Quantity:</h1>
+<div>
+  <div class="btc">
+    <img src="assets/bitcoin.png" class="btcPic" width="50" height="50">
+    <h2 class="bbb">: {{btcQuan}}</h2>
+  </div>
+  <div class="eth">
+    <img src="assets/ethereum.webp" class="ethPic">
+    <h2 class="bbb">: {{ethQuan}}</h2>
+
+  </div>
+  <div class="link">
+    <img src="assets/chainlink.png" class="linkPic">
+    <h2 class="bbb">: {{linkQuan}}</h2>
+
+  </div>
+  <div class="xrp">
+    <img src="assets/xrp.png" class="xrpPic">
+    <h2 class="bbb">: {{xrpQuan}}</h2>
+
+  </div>
+  <div class="atom">
+    <img src="assets/cosmos-atom-logo.png" class="atomPic">
+    <h2 class="bbb">: {{atomQuan}}</h2>
+
+  </div>
+</div>
+</div>
