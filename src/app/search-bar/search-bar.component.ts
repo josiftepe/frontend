@@ -7,10 +7,10 @@ import axios from 'axios';
 })
 export class SearchBarComponent {
   searchTerm: string;
-
+  searched : string = ""
   search() {
-    if (this.searchTerm) {
-      const searchUrl = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${this.searchTerm}&order=market_cap_desc&per_page=1&page=1&sparkline=false`;
+    console.log(this.searched)
+      const searchUrl = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${this.searched}&order=market_cap_desc&per_page=1&page=1&sparkline=false`;
       axios.get(searchUrl)
         .then(response => {
           const coinData = response.data[0];
@@ -21,6 +21,6 @@ export class SearchBarComponent {
         .catch(error => {
           console.error('Error occurred during search:', error);
         });
-    }
+
   }
 }
