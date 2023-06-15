@@ -4,9 +4,9 @@
   </span>
   <div class="spacer">
     <button mat-flat-button color="blue" class="btn1" routerLink="/dashboard">Dashboard</button>
-    <button mat-flat-button color="blue" routerLink="/trade">Trading</button>
+    <button mat-flat-button color="blue" (click)="tradeFunc()">Trading</button>
     <button mat-flat-button color="blue" routerLink="/market">Market</button>
-    <button mat-flat-button color="blue" routerLink="/portofolio">Portofolio </button>
+    <button mat-flat-button color="blue" (click)="portofolionFunc() ">Portofolio </button>
 
   </div>
   <div class="login" >

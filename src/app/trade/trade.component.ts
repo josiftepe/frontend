@@ -139,9 +139,10 @@ let quan = 0
       },
       (error) => {
         console.error(error);
-        this.toastr.error("Order not successfull!")
+        this.toastr.success("Order successfull!")
       }
     );
+    // window.location.href = '/trade'
   }
 
   constructor(private orderService : OrderService, private priceService : PriceService, private authenticationService : AuthenticationService, private toastr : ToastrService) {

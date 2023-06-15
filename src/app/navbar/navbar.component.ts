@@ -51,4 +51,10 @@ export class NavbarComponent implements OnInit{
     this.loggedIn = false
     // window.location.reload()
   }
+  tradeFunc() {
+    window.location.href = '/trade'
+  }
+  portofolionFunc() {
+    window.location.href = '/portofolio'
+  }
 }
